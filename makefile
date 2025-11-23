@@ -1,19 +1,12 @@
-SRC_DIR := .
-OBJ_DIR := .
-SRC_FILES := $(wildcard $(SRC_DIR)/*.cpp)
-OBJ_FILES := $(patsubst $(SRC_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(SRC_FILES))
-LDFLAGS := -L/opt/homebrew/lib -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
-CXXFLAGS := -g -Wall -fpermissive -std=c++17 -I/opt/homebrew/include
-TARGET := triangle.out
+CXX = g++
+CXXFLAGS = -std=c++17 -I"C:/Users/jordy/OneDrive/SFML-2.4.0-built/include"
+LDFLAGS = -L"C:/Users/jordy/OneDrive/SFML-2.4.0-built/lib" -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 
-$(TARGET): $(OBJ_FILES)
-	g++ -o $@ $^ $(LDFLAGS)
+SRC = main.cpp
+TARGET = ChaosGame.exe
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
-	g++ $(CXXFLAGS) -c -o $@ $<
+$(TARGET): $(SRC)
+	$(CXX) $(SRC) -o $(TARGET) $(CXXFLAGS) $(LDFLAGS)
 
-run:
+run: $(TARGET)
 	./$(TARGET)
-
-clean:
-	rm $(TARGET) *.o
