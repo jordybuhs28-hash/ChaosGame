@@ -1,0 +1,14 @@
+# Normalize line endings for source code
+*.cpp     text eol=lf
+*.h       text eol=lf
+Makefile  text eol=lf
+
+# PowerShell scripts should use Windows CRLF
+*.ps1     text eol=crlf
+
+# Batch files also use CRLF
+*.bat     text eol=crlf
+
+# Markdown and text files normalized to LF
+*.md      text eol=lf
+*.txt     text eol=lf
