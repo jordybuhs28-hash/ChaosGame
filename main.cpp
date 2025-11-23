@@ -29,7 +29,7 @@ int main() {
     std::vector<sf::Vector2f> points;
 
     sf::Font font;
-    if (!font.loadFromFile("arial.ttf")) {
+    if (!font.loadFromFile("modeseven.ttf")) {
         return -1; // ensure font file exists in project folder
     }
     sf::Text instructions("Click N vertices (>=3), then right-click to set start point", font, 20);
