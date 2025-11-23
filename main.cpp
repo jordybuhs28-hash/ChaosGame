@@ -22,8 +22,12 @@ float getRatio(int sides) {
 }
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(800, 600), "Chaos Game");
-    window.setFramerateLimit(60);
+	sf::RenderWindow window(sf::VideoMode(800, 600), "Chaos Game");
+//the two  commetted out lines are to make the creen opne up to full screen size.
+//	sf::VideoMode desktop = sf::VideoMode::getDesktopMode();
+//	sf::RenderWindow window(desktop, "Chaos Game", sf::Style::Fullscreen);
+
+	 window.setFramerateLimit(60);
 
     std::vector<sf::Vector2f> vertices;
     std::vector<sf::Vector2f> points;
