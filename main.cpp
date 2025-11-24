@@ -64,7 +64,7 @@ int main() {
 	 if (!font.loadFromFile("modeseven.ttf")) {
 		return -1; // ensure font file exists in project folder
 	}
-	sf::Text instructions("Click N vertices (>=3), then right-click to set start point", font, 20);
+	sf::Text instructions("Click N vertices ( >=3 ), then right-click to set start point", font, 20);
 	instructions.setFillColor(sf::Color::White);
 	instructions.setPosition(10, 10);
 
